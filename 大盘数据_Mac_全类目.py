@@ -11,6 +11,7 @@ import time
 import calendar
 pyautogui.FAILSAFE = True
 
+
 def getDayList():
     #Set time
     today = datetime.date.today()
@@ -37,7 +38,6 @@ def getDayList():
         date_list.append(str(today + datetime.timedelta(days=-1)))
 
     return date_list
-
 
 def getMonthList():
     need_month = int(input("是否下载多月数据?（是输入1, 否输入0）："))
@@ -84,7 +84,6 @@ def getMonthList():
 
     return year_month
 
-
 def MonthDay(year,month):
     month_start = datetime.datetime(year, month, 1)
     start_day = month_start.strftime("%Y-%m-%d")
@@ -126,7 +125,6 @@ def get_url_monthly():
             url = base_url + new_query
             urls.append(url)
     return urls
-
 
 def download_gmv(url):
     # 打开网页
@@ -229,4 +227,3 @@ if __name__ == '__main__':
         print(item[0])
         print(item[1])
     print("-"*50)
-
